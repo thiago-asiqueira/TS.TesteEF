@@ -11,6 +11,7 @@ namespace TS.TesteEF.Data.Context
         }
 
         public DbSet<ClienteEntity> ClienteEntities { get; set; }
+        public DbSet<IngredienteEntity> IngredienteEntities { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -41,11 +41,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\Repositories\Core\IRepositoryAdd.cs" />
+    <Compile Include="Contracts\Repositories\Core\IRepositoryDelete.cs" />
+    <Compile Include="Contracts\Repositories\Core\IRepositoryGetAll.cs" />
+    <Compile Include="Contracts\Repositories\Core\IRepositoryGetById.cs" />
     <Compile Include="Contracts\Repositories\Core\IRepositoryUpdate.cs" />
+    <Compile Include="Contracts\Repositories\IRepositoryCliente.cs" />
+    <Compile Include="Contracts\Repositories\IRepositoryIngrediente.cs" />
+    <Compile Include="Contracts\Repositories\IRepositoryPedido.cs" />
+    <Compile Include="Contracts\Repositories\IRepositoryProduto.cs" />
     <Compile Include="Entities\ClienteEntity.cs" />
     <Compile Include="Entities\Core\Entity.cs" />
-    <Compile Include="Entities\Ingrediente.cs" />
-    <Compile Include="Entities\Pedido.cs" />
+    <Compile Include="Entities\IngredienteEntity.cs" />
+    <Compile Include="Entities\PedidoEntity.cs" />
     <Compile Include="Entities\ProdutoEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
