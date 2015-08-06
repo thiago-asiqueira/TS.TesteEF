@@ -55,6 +55,7 @@
     <Compile Include="Mapings\PedidoMap.cs" />
     <Compile Include="Mapings\ProdutoMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Class1.cs" />
     <Compile Include="Repositories\ClienteRepository.cs" />
     <Compile Include="Repositories\IngredienteRepository.cs" />
     <Compile Include="Repositories\PedidoRepository.cs" />
