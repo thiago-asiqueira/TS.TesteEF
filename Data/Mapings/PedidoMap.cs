@@ -11,7 +11,7 @@ namespace TS.TesteEF.Data.Mapings
         {
             ToTable("Pedido");
 
-            HasKey(s => new { s.IdCliente, s.IdProduto });
+            HasKey(s => new { IdCliente = s.IdCliente.Id, IdProduto = s.IdProduto.Id });
 
             Property(x => x.Quantidade)
                 .HasColumnName("Quantidade")
