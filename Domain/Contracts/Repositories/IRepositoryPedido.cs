@@ -11,6 +11,8 @@ namespace TS.TesteEF.Domain.Contracts.Repositories
         void Update(PedidoEntity pedido);
         IEnumerable<PedidoEntity> GetByCliente(ClienteEntity cliente);
         IEnumerable<PedidoEntity> GetByProduto(ProdutoEntity produto);
-        IEnumerable<PedidoEntity> ObterPedidoEspecial();
+        IEnumerable<PedidoEntity> ObterPedidoEspecial(int valorTotal);
+        PedidoEntity GetByClienteProduto(ClienteEntity cliente, ProdutoEntity produto);
+        IEnumerable<PedidoEntity> GetAll();
     }
 }

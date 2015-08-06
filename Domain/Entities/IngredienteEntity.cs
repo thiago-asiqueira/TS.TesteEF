@@ -7,6 +7,6 @@ namespace TS.TesteEF.Domain.Entities
     public sealed class IngredienteEntity : Entity<int>
     {
         public string Nome { get; set; }
-        public ICollection<ProdutoEntity> Proutos { get; set; }
+        public ICollection<ProdutoEntity> Produtos { get; set; }
     }
 }

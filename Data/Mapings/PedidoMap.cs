@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+
+using System.Data.Entity.ModelConfiguration;
+using TS.TesteEF.Domain.Entities;
 
 namespace TS.TesteEF.Data.Mapings
 {
-    class PedidoMap
+    public sealed class PedidoMap : EntityTypeConfiguration<PedidoEntity>
     {
+        public PedidoMap()
+        {
+            ToTable("Pedido");
+
+            HasKey(s => new { s.IdCliente, s.IdProduto });
+
+            Property(x => x.Quantidade)
+                .HasColumnName("Quantidade")
+                .HasColumnType("decimal")
+                .IsRequired();
+        }
     }
 }

@@ -12,6 +12,8 @@ namespace TS.TesteEF.Data.Context
 
         public DbSet<ClienteEntity> ClienteEntities { get; set; }
         public DbSet<IngredienteEntity> IngredienteEntities { get; set; }
+        public DbSet<PedidoEntity> PedidoEntities { get; set; }
+        public DbSet<ProdutoEntity> ProdutoEntities { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -21,6 +23,9 @@ namespace TS.TesteEF.Data.Context
             modelBuilder.Conventions.Remove<Conventions.ManyToManyCascadeDeleteConvention>();
 
             modelBuilder.Configurations.Add(new Mapings.ClienteMap());
+            modelBuilder.Configurations.Add(new Mapings.IngredienteMap());
+            modelBuilder.Configurations.Add(new Mapings.PedidoMap());
+            modelBuilder.Configurations.Add(new Mapings.ProdutoMap());
 
             base.OnModelCreating(modelBuilder);
         }

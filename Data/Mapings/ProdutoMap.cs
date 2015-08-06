@@ -22,7 +22,7 @@ namespace TS.TesteEF.Data.Mapings
                 .HasColumnType("decimal")
                 .IsRequired();
 
-            HasMany(x => x.Ingredientes).WithMany(c => c.Proutos)
+            HasMany(x => x.Ingredientes).WithMany(c => c.Produtos)
                 .Map(t => t.ToTable("ProdutoIngrediente")
                 .MapLeftKey("Produto")
                 .MapRightKey("Ingrediente"));
