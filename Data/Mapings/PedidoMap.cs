@@ -11,7 +11,10 @@ namespace TS.TesteEF.Data.Mapings
         {
             ToTable("Pedido");
 
-            HasKey(s => new { IdCliente = s.IdCliente.Id, IdProduto = s.IdProduto.Id });
+            HasKey(x => new { x.IdCliente, x.IdProduto });
+
+            HasRequired<ClienteEntity>(x => x.Cliente).WithMany().HasForeignKey(x => x.IdCliente);
+            HasRequired<ProdutoEntity>(x => x.Produto).WithMany().HasForeignKey(x => x.IdProduto);
 
             Property(x => x.Quantidade)
                 .HasColumnName("Quantidade")

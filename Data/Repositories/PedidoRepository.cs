@@ -31,17 +31,17 @@ namespace TS.TesteEF.Data.Repositories
 
         public IEnumerable<PedidoEntity> GetByCliente(ClienteEntity cliente)
         {
-            return _context.PedidoEntities.Where(x => x.IdCliente == cliente).ToList();
+            return _context.PedidoEntities.Where(x => x.Cliente == cliente).ToList();
         }
 
         public PedidoEntity GetByClienteProduto(ClienteEntity cliente, ProdutoEntity produto)
         {
-            return _context.PedidoEntities.SingleOrDefault(x => x.IdCliente == cliente && x.IdProduto == produto);
+            return _context.PedidoEntities.SingleOrDefault(x => x.Cliente == cliente && x.Produto == produto);
         }
 
         public IEnumerable<PedidoEntity> GetByProduto(ProdutoEntity produto)
         {
-            return _context.PedidoEntities.Where(x => x.IdProduto == produto).ToList();
+            return _context.PedidoEntities.Where(x => x.Produto == produto).ToList();
         }
 
         public IEnumerable<PedidoEntity> ObterPedidoEspecial(int valorTotal = 100)
@@ -51,7 +51,7 @@ namespace TS.TesteEF.Data.Repositories
 
             foreach (var item in pedidos)
             {
-                if (item.IdProduto.Valor * item.Quantidade > valorTotal)
+                if (item.Produto.Valor * item.Quantidade > valorTotal)
                 {
                     pedidosEspeciais.Add(item);
                 }

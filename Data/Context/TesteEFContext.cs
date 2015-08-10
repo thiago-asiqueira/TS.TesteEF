@@ -6,7 +6,7 @@ namespace TS.TesteEF.Data.Context
 {
     public sealed class TesteEFContext : DbContext
     {
-        public TesteEFContext(): base("TesteEF")
+        public TesteEFContext(): base(@"Data Source=(localdb)\TesteEF;Initial catalog=TesteEf;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
         {
         }
 
