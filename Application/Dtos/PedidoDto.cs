@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Dtos
 {
-    public sealed class PedidoDto : CoreDto
+    public sealed class PedidoDto
     {
         public ClienteDto Cliente { get; set; }
         public ProdutoDto Produto { get; set; }

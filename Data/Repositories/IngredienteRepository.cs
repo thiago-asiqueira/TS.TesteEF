@@ -38,6 +38,16 @@ namespace TS.TesteEF.Data.Repositories
             return _context.IngredienteEntities.SingleOrDefault(x => x.Id == id);
         }
 
+        public IEnumerable<IngredienteEntity> GetByNome(string nome)
+        {
+            return _context.IngredienteEntities.Where(x => x.Nome.Contains(nome)).ToList();
+        }
+
+        public IEnumerable<IngredienteEntity> GetByProduto(ProdutoEntity produto)
+        {
+            return _context.IngredienteEntities.Where(x => x.Produtos.Contains(produto)).ToList();
+        }
+
         public void Update(IngredienteEntity entity)
         {
             _context.Entry(entity).State = EntityState.Modified;

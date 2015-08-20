@@ -13,7 +13,7 @@ namespace TS.TesteEF.Domain.Contracts.Services
         void DeletarIngrediente(int idIngrediente);
         void AtualizarIngrediente(IngredienteEntity Ingrediente);
         IEnumerable<IngredienteEntity> ConsultarTodosIngredientes();
-        IEnumerable<IngredienteEntity> ConsultarIngredientePorProduto(int idProduto);
+        IEnumerable<IngredienteEntity> ConsultarIngredientePorProduto(ProdutoEntity produto);
         IngredienteEntity ConsultarIngredientePorId(int idCliente);
         IEnumerable<IngredienteEntity> ConsultarIngredientePorNome(string nomeIngrediente);
     }

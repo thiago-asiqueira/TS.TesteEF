@@ -41,6 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IClienteApplicationService.cs" />
+    <Compile Include="Converters\ClienteConverter.cs" />
+    <Compile Include="Converters\IngredienteConverter.cs" />
+    <Compile Include="Converters\PedidoConverter.cs" />
+    <Compile Include="Converters\ProdutoConverter.cs" />
     <Compile Include="Dtos\ClienteDto.cs" />
     <Compile Include="Dtos\Core\CoreDto.cs" />
     <Compile Include="Dtos\IngredienteDto.cs" />
@@ -49,8 +53,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Converters\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{93e5e225-21b7-4857-8a8f-f68d1977d6cb}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

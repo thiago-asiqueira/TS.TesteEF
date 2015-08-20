@@ -11,5 +11,7 @@ namespace TS.TesteEF.Domain.Contracts.Repositories
         , IRepositoryGetById<int, IngredienteEntity>
         , IRepositoryUpdate<IngredienteEntity, int>
     {
+        IEnumerable<IngredienteEntity> GetByNome(string nome);
+        IEnumerable<IngredienteEntity> GetByProduto(ProdutoEntity produto);
     }
 }

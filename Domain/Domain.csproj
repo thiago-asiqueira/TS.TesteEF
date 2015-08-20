@@ -58,12 +58,17 @@
     <Compile Include="Entities\IngredienteEntity.cs" />
     <Compile Include="Entities\PedidoEntity.cs" />
     <Compile Include="Entities\ProdutoEntity.cs" />
+    <Compile Include="Factories\ClienteFactory.cs" />
+    <Compile Include="Factories\IngredienteFactory.cs" />
+    <Compile Include="Factories\PedidoFactory.cs" />
+    <Compile Include="Factories\ProdutoFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ClienteDomainService.cs" />
+    <Compile Include="Services\IngredienteDomainService.cs" />
     <Compile Include="Services\PedidoDomainService.cs" />
+    <Compile Include="Services\ProdutoDomainService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Factories\" />
     <Folder Include="ValueObjects\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -40,22 +40,17 @@ namespace TS.TesteEF.Domain.Services
 
         public IEnumerable<PedidoEntity> ConsultarPedidoPorProduto(ProdutoEntity Produto)
         {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<PedidoEntity> ConsultarPedidoPorProduto(int idProduto)
-        {
-            throw new NotImplementedException();
+            return _pedidoRepository.GetByProduto(Produto);
         }
 
         public IEnumerable<PedidoEntity> ConsultarTodosPedidos()
         {
-            throw new NotImplementedException();
+            return _pedidoRepository.GetAll();
         }
 
-        public void DeletarPedido(int idPedido)
+        public void DeletarPedido(ClienteEntity Cliente, ProdutoEntity Produto)
         {
-            throw new NotImplementedException();
+            _pedidoRepository.Delete(Cliente, Produto);
         }
     }
 }

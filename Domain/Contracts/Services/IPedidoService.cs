@@ -10,7 +10,7 @@ namespace TS.TesteEF.Domain.Contracts.Services
     public interface IPedidoService
     {
         void CadastrarPedido(PedidoEntity Pedido);
-        void DeletarPedido(int idPedido);
+        void DeletarPedido(ClienteEntity Cliente, ProdutoEntity Produto);
         void AtualizarPedido(PedidoEntity Pedido);
         IEnumerable<PedidoEntity> ConsultarTodosPedidos();
         IEnumerable<PedidoEntity> ConsultarPedidoPorProduto(ProdutoEntity Produto);
